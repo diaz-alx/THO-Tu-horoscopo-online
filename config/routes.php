@@ -1,3 +1,3 @@
 <?php
-define('RUTA', 'http://localhost/tho-tu-horoscopo-online/');
+define('RUTA', 'http://localhost/laboratorio_3/');
 ?>

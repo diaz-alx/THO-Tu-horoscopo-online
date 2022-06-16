@@ -42,9 +42,14 @@
 	<nav class="barra">
 		<a href="index.php">Accueil</a>
 		<a href="https://es.wikipedia.org/wiki/Hor%C3%B3scopo">Quel est l'horoscope ?</a>
+        <a href="<?php echo RUTA; ?>logout.php">Logout</a>
 	</nav>
 
-	<div class="contenido">
+	<?php if(isset($colorBG)):?>
+                    <div class="contenido" > 
+					<?php else:?>
+                    <div class="contenido" style = "background-color:<?php echo  $_SESSION['colorfondo']; ?>">
+					<?php endif; ?>
 <?php } ?>
 
 

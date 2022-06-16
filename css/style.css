@@ -22,13 +22,12 @@ overflow-x: hidden;
 
 .izq {
 left: 0;
-background-color: #9369f7;
+background-image: url("../img/galaxia.jpg");
+
 
 }
 
-.container {
 
-}
 
 .centrada {
 position: absolute;
@@ -36,6 +35,10 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 text-align: center;
+}
+
+.centrada p{
+  color : white;
 }
 
 .centrada img{
@@ -60,16 +63,17 @@ background-color:#c4c4c4;
 height: 400px;
 max-width: 66%;
 margin-top: 10%;
-margin: auto;
+
 position: relative;
 }
 
 .formulario{
 position: absolute;
-top: 50%; left: 50%;
+top: 50%; 
+left: 50%;
 transform: translate(-50%,-50%);
-width: 200px;
-height: 200px;
+/*width: 400px;
+height: 400px;*/
 }
 
 .btn {
@@ -82,6 +86,7 @@ font-weight: 700;
   padding: 10px 20px 10px 20px;
   border: solid #9369f7 2px;
   text-decoration: none;
+  width: 231px;
 }
 
 .btn:hover {
@@ -117,16 +122,7 @@ margin-top: 3%;
   font-weight: 800;
 }
 
-.barra a{
-  width: 50%;
-  float: left;
-  text-align: center; 
-  text-decoration: none; 
-  background-color: #FAFAFF;
-  color: #4c16bd;
-  font-weight: 700;
 
-}
 
 .barra{
   height: 2em;
@@ -134,6 +130,16 @@ margin-top: 3%;
   color: white;
   font-weight: 700;
   padding-top: 10px;
+}
+
+.barra a{
+  width: 33%;
+  float:left;
+  text-align: center;
+  text-decoration: none;
+  background-color: #FAFAFF;
+  color: #4c16bd;
+  font-weight: 500;
 }
 
 h2{

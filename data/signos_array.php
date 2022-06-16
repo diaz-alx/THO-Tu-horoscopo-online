@@ -160,7 +160,10 @@ $signos_en = array(
         'texto' => "Starting today, Pisces, you will be able to start enjoying all the fruits that you are going to reap for a long time of work and daily effort. However, it may seem to you that perhaps you deserve more. Do not despair, this is only the beginning and satisfaction will fall like ripe fruit. This is a good time to experiment with your creativity at work. You can dare and face some risk, it will work out for you. If you have a partner right now, Pisces, today you will have a reason to celebrate, perhaps a good news that concerns both of you. And if you are a little nostalgic because at the moment you have no one by your side, open your eyes wide because very close you have someone who is very interested in you and who would also come in handy. very shortly."
     ),
     array('nombre' => 'capricornio',
-        'key' => 9, 'simbolo' => 'img/capricornio.png', 'inicio' => '01-01', 'fin' => '01-20',
+        'key' => 9, 
+        'simbolo' => 'img/capricornio.png', 
+        'inicio' => '01-01', 
+        'fin' => '01-20',
         'texto' => "If today you are presented with the opportunity to take a different path in the professional field, Capricorn, think about it before deciding, but do not forget that it could be something that would mean something very positive for you on a daily basis in the future. It is an opportunity to turn your life around. If you accept it, you'll be fine. Don't let the fear that it won't work for you in the future condition you so much. Put all your interest and efforts into that goal every day. In love, yes. If you are alone and perhaps wanting to start a new relationship, think that this is probably not the right time yet.You need to take the time to think things through and not decide something that could be wrong and that would make you feel a sense of happiness again. I fail daily, Capricorn."
 )
 );

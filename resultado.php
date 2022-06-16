@@ -1,4 +1,10 @@
 <?php 
+session_start();
+
+if(!isset($_SESSION['UserData']['Username'])){
+        header("location:index.php");
+        exit;
+}
 
 require 'config/routes.php';
 require 'class/signos.class.php';
@@ -6,20 +12,20 @@ require 'functions.php';
 require 'data/signos_array.php';
 
 if (!isset($_COOKIE["idiomaUsuario"])){
-    $resultado = "plantillas/language_es/resultado.view.php";
-    $idioma = $signos_es;
-
-} elseif ($_COOKIE["idiomaUsuario"] == "en"){
-    $resultado = "plantillas/language_en/resultado.view.php";
-    $idioma = $signos_en;
-
-} elseif ($_COOKIE["idiomaUsuario"] == "fr"){
-    $resultado = "plantillas/language_fr/resultado.view.php";
-    $idioma = $signos_fr;
-
+    $resultado =  'plantillas/language_es/resultado.view.php';
+    $info = $signos_es;
 } else {
-    $resultado = "plantillas/language_es/resultado.view.php";
-    $idioma = $signos_es;
+    $setIdioma = verifyLang($_COOKIE['idiomaUsuario']);
+    $resultado = $setIdioma['resultado'];
+    $info = eval('return $'. $setIdioma['signo'] . ';');
+}
+
+if(isset($_REQUEST['OpcFondo']))
+{
+    $colorBG = traducirColor($_REQUEST['OpcFondo']);
+    $_SESSION['colorfondo'] = $colorBG;
+}else{
+    $style = 0;
 }
 
 if (!isset($_POST['name'], $_POST['date'])) {
@@ -28,7 +34,7 @@ if (!isset($_POST['name'], $_POST['date'])) {
     $name = $_POST['name'];
     $date = $_POST['date'];
 
-    $zodiac = new SignosZodiacales($date, $idioma);
+    $zodiac = new SignosZodiacales($date, $info);
     $nombre = $zodiac->getSignoZodiacal();
     $simbolo = $zodiac->getSimbolo();
     $texto = $zodiac->getSignoTexto();
@@ -37,5 +43,3 @@ if (!isset($_POST['name'], $_POST['date'])) {
 
 require $resultado;
 }
-
-?>

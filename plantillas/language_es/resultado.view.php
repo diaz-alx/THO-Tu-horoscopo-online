@@ -1,5 +1,5 @@
 <?php 
-include 'header.php';
+require 'header.php';
 header_result(); 
 ?>
 <section class="seccion-izquierda">
@@ -18,6 +18,6 @@ header_result();
 	</section>
 
 <?php 
-include 'footer.php';
+require 'footer.php';
 footer_result(); 
 ?>

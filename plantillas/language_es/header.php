@@ -31,6 +31,7 @@
         }
         </script>
 
+
     </head>
 	<body>
 	<header id="encabezado">
@@ -42,8 +43,13 @@
 	<nav class="barra">
 		<a href="index.php">Inicio</a>
 		<a href="https://es.wikipedia.org/wiki/Hor%C3%B3scopo">¿Qué es el horóscopo?</a>
+        <a href="<?php echo RUTA; ?>logout.php">Cerrar Sesión</a>
 	</nav>
 
-	<div class="contenido">
+	<?php if(isset($colorBG)):?>
+                    <div class="contenido" > 
+					<?php else:?>
+                    <div class="contenido" style = "background-color:<?php echo  $_SESSION['colorfondo']; ?>">
+					<?php endif; ?>
 <?php } ?>
 
